@@ -1,6 +1,6 @@
 require.config({
-    path: {
-        jquery: '../../node_modules/jquery/dist/jquery.min',
+    paths: {
+        jquery: './../../node_modules/jquery/dist/jquery.min',
         md5: './jquery.md5',
         regLogin: './reg-login'
     },
@@ -9,6 +9,9 @@ require.config({
     }
 })
 
-require(['jquery'], function () {
-
+require(['jquery', 'regLogin'], function ($, regObj) {
+    regObj.regEvent($('.reg'));
+    regObj.logEvent($('.login'));
+    regObj.switchCode();
+    regObj.tab();
 })

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <script src="./../../node_modules/requirejs/require.js" data-main="../js/main"></script>
     <link rel="stylesheet" href="./../style/reg-log.css">
 </head>
 
@@ -21,22 +20,22 @@
                 <li><span>手机动态登录</span></li>
             </ul>
             <div class="show">
-                <form action="" method="post" class="form">
+                <form class="form">
                     <p><input type="text" name="phone" id="phone" placeholder="邮件地址/手机号码"></p>
                     <p><input type="text" name="pwd" id="pwd" placeholder="请输入密码"></p>
                     <p><input type="text" name="securityCode" id="securityCode" placeholder="验证码"><img
                             src="./../image/securityCode/2.jpg" alt="" class="imgVer"></p>
-                    <p><button type="submit" class="login">登录</button></p>
+                    <p><button type="button" class="login">登录</button></p>
                 </form>
             </div>
             <div>
-                <form action="" method="post" class="form">
+                <form class="form">
                     <p><input type="text" name="phone" id="phone" placeholder="手机号码"></p>
                     <p><input type="text" placeholder="验证码" name="securityCode" id="securityCode"><img
                             src="./../image/securityCode/1.jpg" alt="" class="imgVer"></p>
                     <p><input type="text" name="phoneCode" id="phoneCode" placeholder="手机动态码"><button id="getCode"
                             type="button">手机验证码</button></p>
-                    <p><button type="submit" class="login">登录</button></p>
+                    <p><button type="button" class="login">登录</button></p>
                 </form>
             </div>
             <p class="text-right">
@@ -46,29 +45,29 @@
     </div>
 
     <script>
-        $(function () {
-            $('.wrapper>ul>li').on('click', function () {
-                var index = $('.wrapper>ul>li').index(this);
-                console.log($(this));
-                $(this).addClass('active').siblings().removeClass('active');
-                $('.wrapper>div').eq(index).addClass('show').siblings().removeClass('show');
-            })
-            $('.imgVer').on('click', function () {
-                // console.log($(this)[0].src);
-                $(this)[0].src = randomImg();
-            })
+        // $(function () {
+        //     $('.wrapper>ul>li').on('click', function () {
+        //         var index = $('.wrapper>ul>li').index(this);
+        //         console.log($(this));
+        //         $(this).addClass('active').siblings().removeClass('active');
+        //         $('.wrapper>div').eq(index).addClass('show').siblings().removeClass('show');
+        //     })
+        //     $('.imgVer').on('click', function () {
+        //         // console.log($(this)[0].src);
+        //         $(this)[0].src = randomImg();
+        //     })
 
-            function randomImg() {
-                var codeArr = ['./../image/securityCode/1.jpg', './../image/securityCode/2.jpg',
-                    './../image/securityCode/3.jpg', './../image/securityCode/4.jpg',
-                    './../image/securityCode/5.jpg', './../image/securityCode/6.jpg',
-                    './../image/securityCode/7.jpg'
-                ];
-                var ranNum = Math.floor(Math.random() * codeArr.length);
-                return codeArr[ranNum];
-            }
+        //     function randomImg() {
+        //         var codeArr = ['./../image/securityCode/1.jpg', './../image/securityCode/2.jpg',
+        //             './../image/securityCode/3.jpg', './../image/securityCode/4.jpg',
+        //             './../image/securityCode/5.jpg', './../image/securityCode/6.jpg',
+        //             './../image/securityCode/7.jpg'
+        //         ];
+        //         var ranNum = Math.floor(Math.random() * codeArr.length);
+        //         return codeArr[ranNum];
+        //     }
 
-        })
+        // })
     </script>
 
 </body>

@@ -2,15 +2,14 @@
 include('./connection.php');
 
 $phone=$_REQUEST['phone'];
-$pwd=$_REQUEST['pwd'];
-$email=$_REQUEST['email'];
+$pwd=$_REQUEST['password'];
 
-$sql="select * from userinfo where (u_phone='$phone' or u_email='$email') and u_pwd='$pwd'";
+$sql="select * from userinfo where (u_phone='$phone' or u_email='$phone') and u_pwd='$pwd'";
 
 $res=$mysqli->query($sql);
 // var_dump($res);
 if($res->num_rows>0){
-    echo '{"msg","登陆成功"}';
+    echo '{"msg":"登陆成功"}';
     // echo "<script>alert('登陆成功')</script>";
     // $row=$res->fetch_assoc();
     // // var_dump($row);

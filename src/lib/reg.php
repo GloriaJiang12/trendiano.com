@@ -5,7 +5,7 @@ include('./connection.php');
 
 
 $phone=$_REQUEST['phone'];
-$pwd=$_REQUEST['pwd'];
+$pwd=$_REQUEST['password'];
 
 $sql="select * from userinfo where u_phone='$phone'";
 
