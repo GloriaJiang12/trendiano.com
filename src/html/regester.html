@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./../style/reg-log.css">
+</head>
+
+<body>
+    <div class="outFrame" style="background-image: url('./../image/bg/login_trendiano.jpg');height: 100%;">
+        <a href="./index1.html" class="linkHome">返回首页</a>
+        <div class="wrapper">
+            <h3>新用户注册</h3>
+            <div class="inFrame">
+                <form action="" method="post" class="loginForm form">
+                    <p><input type="text" name="phone" id="phone" placeholder="手机号码"></p>
+                    <p><input type="text" placeholder="图片验证码" name="imgCode" id="imgCode"><img
+                            src="./../image/securityCode/1.jpg" alt="" class="imgVer"></p>
+                    <p><input type="password" name="pwd" id="pwd" placeholder="密码"></p>
+                    <p><input type="password" name="confirm" id="confirm" placeholder="确认密码"></p>
+                    <p><input type="text" name="phoneCode" id="phoneCode" placeholder="填写手机验证码"><button id="getCode"
+                            type="button">获取手机验证码</button></p>
+                    <p><button type="submit">注册</button></p>
+                    <p class="text-right"><a href="./login.html">返回登录</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.imgVer').on('click', function () {
+                // console.log($(this)[0].src);
+                $(this)[0].src = randomImg();
+            })
+
+            function randomImg() {
+                var codeArr = ['./../image/securityCode/1.jpg', './../image/securityCode/2.jpg',
+                    './../image/securityCode/3.jpg', './../image/securityCode/4.jpg',
+                    './../image/securityCode/5.jpg', './../image/securityCode/6.jpg',
+                    './../image/securityCode/7.jpg'
+                ];
+                var ranNum = Math.floor(Math.random() * codeArr.length);
+                return codeArr[ranNum];
+            }
+        })
+    </script>
+
+</body>
+
+</html>
