@@ -44,6 +44,13 @@ a {
   color: #069;
   outline: 0;
 }
+button {
+  font-family: "Microsoft yahei";
+  cursor: pointer;
+  color: #ffffff;
+  padding: 4px 1em;
+  background: #e74165;
+}
 .header {
   height: 40px;
   position: relative;
@@ -135,6 +142,22 @@ a {
   border-left: 10px solid transparent;
   left: 0;
 }
+.bg .container .car .blank {
+  line-height: 30;
+  text-align: center;
+  font-size: 18px;
+}
+.bg .container .car .blank .blankContent {
+  width: 57px;
+  height: 72px;
+  margin-right: 32px;
+  padding-bottom: 24px;
+  vertical-align: middle;
+  background: url(icon_blank.png?v=20191113112127) no-repeat;
+  overflow: hidden;
+  line-height: 100;
+  display: inline-block;
+}
 .bg .container .car .carContent {
   width: 92.8571%;
   margin: 0 auto;
@@ -160,4 +183,88 @@ a {
 .bg .container .car .carContent table thead tr th:nth-of-type(6),
 .bg .container .car .carContent table thead tr th:nth-of-type(7) {
   width: 16.6667%;
+}
+.bg .container .pageNum {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.bg .container .pageNum > div span {
+  color: #069;
+  font-weight: 700;
+  padding: 4px;
+  margin: 0 2px;
+}
+.bg .container .orderInfo .chooseAll {
+  font-size: 14px;
+  padding: 24px;
+}
+.bg .container .orderInfo .chooseAll p label {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 28px;
+}
+.bg .container .orderInfo .chooseAll p a {
+  margin-right: 28px;
+}
+.bg .container .orderInfo .sumPrice {
+  background: #fff;
+  text-align: right;
+  padding: 24px;
+}
+.bg .container .orderInfo .sumPrice p {
+  margin-bottom: 12px;
+}
+.bg .container .orderInfo .sumPrice p span {
+  font-size: 24px;
+}
+.bg .container .orderInfo .sumPrice p span.totalPrice {
+  color: #d7261c;
+}
+.footer {
+  color: #818181;
+  height: auto;
+  padding: 36px 0;
+  text-align: center;
+  background: url(../image/car/bg_my_footer.png) left bottom repeat-x #f4f3f3;
+}
+.footer .brand {
+  background: url(../image/car/brand_trendiano.png) center 12px no-repeat;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+.footer p {
+  line-height: 36px;
+  color: #818181;
+}
+.backTop {
+  right: 20px;
+  bottom: 10px;
+  width: 32px;
+  height: auto;
+  position: fixed;
+  z-index: 840;
+}
+.backTop ul li a {
+  display: block;
+  cursor: pointer;
+  font-family: arial;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #bbb;
+  margin-top: 1px;
+  line-height: 1.2;
+  padding: 2px 0;
+}
+.backTop ul li a.top {
+  background: url('../image/sprite/icon.png') -60px -1080px no-repeat #999;
+  width: 32px;
+  height: 30px;
+  line-height: 20px;
+  font-size: 10px;
+  overflow: hidden;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  background-color: #1a1a1a;
 }

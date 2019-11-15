@@ -1,56 +1,6 @@
 @charset 'utf-8';
 
-body,
-dd,
-dl,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-ul {
-    margin: 0
-}
-
-button,
-img {
-    border: 0
-}
-
-img,
-input,
-label {
-    vertical-align: middle
-}
-
-ol,
-ul {
-    padding: 0;
-    list-style: none
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-body,
-html {
-    width: 100%;
-    height: 100%;
-    font: 12px/1.5 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif !important;
-    color: #333
-}
-
-a {
-    text-decoration: none;
-    color: #069;
-    outline: 0
-}
+@import './common.less';
 
 .header {
     height: 40px;
@@ -157,6 +107,24 @@ a {
                 }
             }
 
+            .blank {
+                line-height: 30;
+                text-align: center;
+                font-size: 18px;
+
+                .blankContent {
+                    width: 57px;
+                    height: 72px;
+                    margin-right: 32px;
+                    padding-bottom: 24px;
+                    vertical-align: middle;
+                    background: url(icon_blank.png?v=20191113112127) no-repeat;
+                    overflow: hidden;
+                    line-height: 100;
+                    display: inline-block;
+                }
+            }
+
             .carContent {
                 width: 92.8571%;
                 margin: 0 auto;
@@ -190,6 +158,117 @@ a {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .pageNum {
+            padding: 24px 0;
+            text-align: center;
+            font-size: 14px;
+
+            &>div {
+                span {
+                    color: #069;
+                    font-weight: 700;
+                    padding: 4px;
+                    margin: 0 2px
+                }
+            }
+        }
+
+        .orderInfo {
+            .chooseAll {
+                font-size: 14px;
+                padding: 24px;
+
+                p {
+                    label {
+                        display: inline-block;
+                        cursor: pointer;
+                        margin-right: 28px;
+                    }
+
+                    a {
+                        margin-right: 28px;
+                    }
+                }
+            }
+
+            .sumPrice {
+                background: #fff;
+                text-align: right;
+                padding: 24px;
+
+                p {
+                    margin-bottom: 12px;
+
+                    span {
+                        font-size: 24px;
+
+                        &.totalPrice {
+                            color: #d7261c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    color: #818181;
+    height: auto;
+    padding: 36px 0;
+    text-align: center;
+    background: url(./../image/car/bg_my_footer.png) left bottom repeat-x #f4f3f3;
+
+    .brand {
+        background: url(./../image/car/brand_trendiano.png) center 12px no-repeat;
+        margin: 0 auto;
+        padding: 80px 0 0;
+    }
+
+    p {
+        line-height: 36px;
+        color: #818181;
+    }
+}
+
+.backTop {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    width: 32px;
+    height: auto;
+    position: fixed;
+    z-index: 840;
+
+    ul {
+        li {
+            a {
+                display: block;
+                cursor: pointer;
+                font-family: arial;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                background-color: #bbb;
+                margin-top: 1px;
+                line-height: 1.2;
+                padding: 2px 0;
+
+                &.top {
+                    background: url('./../image/sprite/icon.png') -60px -1080px no-repeat #999;
+                    width: 32px;
+                    height: 30px;
+                    line-height: 20px;
+                    font-size: 10px;
+                    overflow: hidden;
+                    filter: alpha(opacity=50);
+                    opacity: .5;
+                    background-color: #1a1a1a
                 }
             }
         }
