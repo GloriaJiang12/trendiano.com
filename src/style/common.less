@@ -61,7 +61,14 @@ button {
 }
 
 
-
+.clear::after {
+    content: '';
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: block;
+}
 
 
 

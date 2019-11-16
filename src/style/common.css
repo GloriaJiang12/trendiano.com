@@ -51,3 +51,11 @@ button {
   padding: 4px 1em;
   background: #e74165;
 }
+.clear::after {
+  content: '';
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+}

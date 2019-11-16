@@ -1,0 +1,131 @@
+@charset 'utf-8';
+@import './headFoot.less';
+
+.title {
+    background: #1b1b1b;
+    width: 100%;
+    position: relative;
+    box-sizing: content-box;
+    clear: both;
+
+    .inner3 {
+        width: 1000px;
+        margin: 0 auto;
+
+        span {
+            color: #fff;
+            font-size: 18px;
+            line-height: 80px;
+        }
+    }
+}
+
+.main {
+    .inner4 {
+        width: 1180px;
+        margin: 20px auto 0;
+
+        .mainLeft {
+            font-size: 12px;
+            float: left;
+
+            ul {
+                width: 124px;
+                padding-right: 26px;
+                position: relative;
+                box-sizing: border-box;
+
+                li {
+                    padding-left: 12px;
+                    text-indent: 3px;
+                    color: #333;
+                }
+
+                &.type {
+                    line-height: 28px;
+                }
+
+                &.size {
+                    margin-top: 35px;
+
+                    li {
+                        padding-left: 15px;
+                        height: 30px;
+                        line-height: 30px;
+
+                        &:nth-of-type(1) {
+                            height: 28px;
+                            line-height: 28px;
+                            color: #fff;
+                            background: #000;
+                        }
+
+                        &:nth-of-type(3),
+                        &:nth-of-type(4),
+                        &:nth-of-type(5),
+                        &:nth-of-type(6) {
+                            padding-left: 28px;
+                            height: 25px;
+                            line-height: 25px;
+                            background: url(./../image/sprite/icon_tre.png) no-repeat -288px -1891px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .mainRight {
+            float: right;
+            width: 880px;
+
+            &>ul {
+                li {
+                    float: left;
+                    width: 270px;
+                    margin: 25px 20px 0 0;
+                    color: #666;
+
+                    a {
+                        color: #333;
+                        line-height: 22px;
+                        text-decoration: none;
+                        outline: 0;
+
+                        &:hover>span {
+                            color: #c9a063;
+                        }
+
+                        img {
+                            display: block;
+                            width: 180px;
+                            height: 320px;
+                            margin: 0 auto;
+                        }
+
+                        span {
+                            &.T-brand {
+                                display: block;
+                                margin: 0;
+                                padding-top: 12px;
+                                border-top: 1px solid #eee;
+                            }
+
+                            &.T-name {
+                                display: block;
+                                margin: 0;
+                            }
+                        }
+
+                        p {
+                            span {
+                                color: #1b1b1b;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
