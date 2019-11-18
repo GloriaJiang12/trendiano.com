@@ -1,0 +1,696 @@
+@charset 'utf-8';
+body,
+dd,
+dl,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  margin: 0;
+}
+button,
+img {
+  border: 0;
+}
+img,
+input,
+label {
+  vertical-align: middle;
+}
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font: 12px/1.5 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif !important;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #069;
+  outline: 0;
+}
+button {
+  font-family: "Microsoft yahei";
+  cursor: pointer;
+  color: #ffffff;
+  padding: 4px 1em;
+  background: #e74165;
+}
+.clear::after {
+  content: '';
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+div {
+  box-sizing: border-box;
+}
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+body {
+  position: relative;
+}
+.header {
+  background: #000;
+}
+.header .inner {
+  position: absolute;
+  right: 0;
+  height: 88px;
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 850;
+}
+.header .logo {
+  height: 72px;
+  position: relative;
+  top: 16px;
+  background: url(../image/sprite/icon.png) -100000px -1000000px no-repeat;
+}
+.header .logo a {
+  display: block;
+  width: 312px;
+  height: 56px;
+  margin: 0 auto;
+  line-height: 8988em;
+  background: url(../image/sprite/icon_tre.png) no-repeat 65px 20px;
+  overflow: hidden;
+}
+.header .header-nav {
+  height: 36px;
+  line-height: 36px;
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+.header .header-nav a {
+  color: #a0a0a0;
+}
+.header .searchBox {
+  position: absolute;
+  right: 0;
+  height: 28px;
+  bottom: 10px;
+}
+.header .searchBox input {
+  display: inline-block;
+  height: 24px;
+  padding: 2px 6px;
+  line-height: 24px;
+  background: 0 0;
+  width: 178px;
+  border: 0;
+  border-bottom: 1px solid #555;
+  color: #a0a0a0;
+}
+.header .searchBox button {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999em;
+  background: url(../image/sprite/icon_tre.png) no-repeat -600px -89px;
+}
+.nav {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 7px 0 0;
+  line-height: 40px;
+  position: relative;
+  z-index: 800;
+  box-sizing: content-box;
+  background: #000;
+}
+.nav .navFixed > ul {
+  width: 1180px;
+  margin: 0 auto;
+}
+.nav .navFixed > ul > li {
+  float: left;
+  margin: 0 9px;
+}
+.nav .navFixed > ul > li:hover .subnav {
+  display: block;
+}
+.nav .navFixed > ul > li a {
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  padding: 0 9px;
+}
+.nav .navFixed > ul > li a:hover {
+  color: #c9a063;
+}
+.nav .navFixed > ul > li.first {
+  margin-left: -9px;
+}
+.nav .navFixed > ul > li.last {
+  float: right;
+  margin-right: -9px;
+  color: #fff;
+}
+.nav .navFixed > ul > li .subnav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.nav .navFixed > ul > li .subnav .line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  top: 0;
+  background-color: #000;
+  opacity: 0.9;
+  line-height: 9999px;
+}
+.nav .navFixed > ul > li .subnav .subnavContent {
+  position: relative;
+  height: 100%;
+  color: #ccc;
+  font-family: din;
+  width: 1180px;
+  margin: 0 auto;
+  text-align: left;
+}
+.nav .navFixed > ul > li .subnav .subnavContent h4 {
+  height: 44px;
+  padding-top: 16px;
+  border-bottom: 1px solid #6b6b6b;
+  line-height: 44px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.nav .navFixed > ul > li .subnav .subnavContent ul {
+  padding: 20px 80px 20px 0;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+}
+.nav .navFixed > ul > li .subnav .subnavContent ul li {
+  display: list-item;
+}
+.nav .navFixed > ul > li .subnav .subnavContent ul li a {
+  line-height: 26px;
+  display: block;
+  padding: 0 3px;
+}
+.footer {
+  padding: 20px 0;
+  background: url(../image/index/footerBg.png);
+  border-top: 4px solid #c1a75f;
+}
+.footer .inner1 {
+  width: 1180px;
+  margin: 0 auto;
+}
+.footer .inner1 ul {
+  overflow: hidden;
+}
+.footer .inner1 ul li {
+  display: inline;
+  float: left;
+  color: #a0a0a0;
+  margin-right: 70px;
+  padding-right: 70px;
+  border-right: 1px solid #d8d8d8;
+  padding-bottom: 666em;
+  margin-bottom: -666em;
+  overflow: hidden;
+}
+.footer .inner1 ul li h3 {
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.footer .inner1 ul li .mouth {
+  margin-bottom: 2px;
+}
+.footer .inner1 ul li .mouth > span {
+  display: block;
+  width: 54px;
+  height: 54px;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  font-family: arial;
+  background: #fff;
+  overflow: hidden;
+}
+.footer .inner1 ul li .mouth > span > em {
+  display: block;
+  height: 29px;
+  font-size: 29px;
+  line-height: 29px;
+  overflow: hidden;
+  font-style: normal;
+}
+.footer .inner1 ul li.about {
+  margin-right: 0;
+  padding-right: 0;
+  border: 0;
+}
+.footer .inner1 ul li.about p {
+  margin-bottom: 4px;
+}
+.footer .inner1 ul li.about p a {
+  color: #666;
+  display: inline-block;
+  margin-right: 12px;
+}
+.footer .inner1 ul li.about div span {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 33px;
+  color: #666;
+  font-size: 12px;
+}
+.footer .inner1 ul li.about div span:nth-of-type(1) {
+  background: url(../image/sprite/icon_tre.png) no-repeat 3px -190px;
+}
+.footer .inner1 ul li.about div span:nth-of-type(2) {
+  background: url(../image/sprite/icon_tre.png) no-repeat -298px -194px;
+}
+.footer .inner1 ul li.about div span:nth-of-type(3) {
+  background: url(../image/sprite/icon_tre.png) no-repeat -595px -193px;
+}
+.footer .inner1 ul li.about div span:nth-of-type(4) {
+  background: url(../image/sprite/icon_tre.png) no-repeat -600px -300px;
+}
+.footer .inner1 ul li.about div span:nth-of-type(5) {
+  background: url(../image/sprite/icon_tre.png) no-repeat 0 -400px;
+}
+.footer .inner1 ul li.about div span.inline {
+  display: inline-block;
+  height: 36px;
+  width: 40px;
+  line-height: 8888em;
+  overflow: hidden;
+  margin-top: 18px;
+}
+.copyRight {
+  background: #000;
+}
+.copyRight .inner2 {
+  width: 750px;
+  padding: 14px 0 14px 250px;
+  background: url(../image/sprite/icon_tre.png) no-repeat 0 -470px;
+  margin: 0 auto;
+}
+.copyRight .inner2 p {
+  line-height: 23px;
+  color: #777;
+}
+.copyRight .inner2 p.line1 {
+  color: #ccc;
+}
+.backTop {
+  right: 20px;
+  bottom: 10px;
+  width: 32px;
+  height: auto;
+  position: fixed;
+  z-index: 840;
+}
+.backTop ul li a {
+  display: block;
+  cursor: pointer;
+  font-family: arial;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #bbb;
+  margin-top: 1px;
+  line-height: 1.2;
+  padding: 2px 0;
+}
+.backTop ul li a.top {
+  background: url('../image/sprite/icon.png') -60px -1080px no-repeat #999;
+  width: 32px;
+  height: 30px;
+  line-height: 20px;
+  font-size: 10px;
+  overflow: hidden;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  background-color: #1a1a1a;
+}
+.title {
+  background: #313131;
+  height: 40px;
+}
+.title .inner3 {
+  width: 1000px;
+  height: 16px;
+  margin: 0 auto;
+  padding: 10px 0;
+  line-height: 16px;
+  color: #999;
+}
+.title .inner3 a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 15px;
+  line-height: 9999px;
+  background: url(../image/sprite/icon_tre.png) no-repeat -3px -1198px;
+  overflow: hidden;
+}
+.title .inner3 span {
+  line-height: 15px;
+}
+.main {
+  padding: 10px 0 40px;
+}
+.main .mainCenter {
+  width: 1180px;
+  margin: 0 auto;
+  height: 640px;
+  overflow: hidden;
+}
+.main .mainCenter .imgBox {
+  display: block;
+  position: relative;
+  float: left;
+  width: 108px;
+}
+.main .mainCenter .imgBox .imgListBox {
+  position: relative;
+  float: left;
+  width: 72px;
+  height: 640px;
+  padding: 0;
+  overflow: hidden;
+}
+.main .mainCenter .imgBox .imgListBox span {
+  position: absolute;
+  width: 72px;
+  height: 20px;
+  left: 0;
+  margin-left: 0;
+  background: url(../image/sprite/arrow_tre.png) no-repeat #000;
+  opacity: 0.7;
+  cursor: pointer;
+  display: block;
+  z-index: 20;
+}
+.main .mainCenter .imgBox .imgListBox span.top {
+  top: 0;
+  background-position: 26px -391px;
+}
+.main .mainCenter .imgBox .imgListBox span.bottom {
+  background-position: 26px -488px;
+  top: 620px;
+  bottom: 0;
+}
+.main .mainCenter .imgBox .imgListBox .imgList {
+  position: absolute;
+  height: fit-content;
+}
+.main .mainCenter .imgBox .imgListBox .imgList li {
+  margin-right: 36px;
+  width: 72px;
+  height: 128px;
+  padding: 2px 0;
+  cursor: pointer;
+  border: 0 solid #fff;
+}
+.main .mainCenter .imgBox .imgListBox .imgList li img {
+  width: 72px;
+  height: 128px;
+}
+.main .mainCenter .midBox {
+  float: left;
+  position: relative;
+}
+.main .mainCenter .midBox .mid {
+  position: relative;
+}
+.main .mainCenter .midBox .mid img {
+  width: 360px;
+  height: 640px;
+}
+.main .mainCenter .midBox .mid .moveBox {
+  background: #ccc;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .mainCenter .midBox .bigBox {
+  width: 505px;
+  height: 560px;
+  overflow: hidden;
+  position: absolute;
+  left: 360px;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+.main .mainCenter .midBox .bigBox .bigImg {
+  position: absolute;
+}
+.main .mainCenter .detail {
+  float: right;
+  width: 430px;
+  margin-top: 85px;
+}
+.main .mainCenter .detail p {
+  line-height: 30px;
+  margin: 5px 0;
+}
+.main .mainCenter .detail p.proBrand {
+  font-size: 20px;
+  color: #000;
+}
+.main .mainCenter .detail p.proPrice {
+  line-height: 30px;
+  font-size: 20px;
+  color: #a40035;
+}
+.main .mainCenter .detail h2 {
+  font-size: 18px;
+  color: #333;
+  line-height: 30px;
+}
+.main .mainCenter .detail h2 em {
+  font-size: 11px;
+  margin-left: 0.6em;
+  color: #aaa;
+}
+.main .mainCenter .detail .optColor {
+  margin-top: 17px;
+  height: 19px;
+}
+.main .mainCenter .detail .optColor li {
+  float: left;
+  height: 26px;
+  padding-right: 12px;
+  line-height: 26px;
+  color: #666;
+}
+.main .mainCenter .detail .optColor li a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.main .mainCenter .detail .optColor li a img {
+  padding: 5px;
+}
+.main .mainCenter .detail .optColor li a img:hover,
+.main .mainCenter .detail .optColor li a img:active {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999;
+  padding: 3px;
+  overflow: hidden;
+}
+.main .mainCenter .detail .optSize {
+  margin-top: 17px;
+  height: 19px;
+}
+.main .mainCenter .detail .optSize li {
+  float: left;
+  height: 26px;
+  padding-right: 12px;
+  line-height: 26px;
+  color: #666;
+  font-size: 14px;
+}
+.main .mainCenter .detail .optSize li.sizeTable {
+  width: 40px;
+  padding-left: 27px;
+  margin-left: 20px;
+  background: url(../image/sprite/icon_tre.png) no-repeat -300px -594px;
+  color: #666;
+  font-size: 12px;
+  cursor: pointer;
+}
+.main .mainCenter .detail .optSize li a {
+  width: 26px;
+  height: 26px;
+  margin-right: 2px;
+  color: #000;
+  line-height: 26px;
+  text-align: center;
+  z-index: 150;
+}
+.main .mainCenter .detail .proBtn {
+  position: relative;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+.main .mainCenter .detail .proBtn p button {
+  display: block;
+  float: left;
+  color: #000;
+  padding: 0;
+}
+.main .mainCenter .detail .proBtn p button.buynow {
+  text-indent: 0;
+  height: 22px;
+  font-size: 16px;
+  margin-right: 12px;
+  background: #fff;
+}
+.main .mainCenter .detail .proBtn p button.favorite {
+  height: 21px;
+  font-size: 14px;
+  padding-left: 44px;
+  background: url(../image/sprite/icon_tre.png) no-repeat -600px -600px;
+}
+.main .mainCenter .detail .proBtn p button.favorite:hover {
+  color: #c9a063;
+}
+.main .mainCenter .detail .proBtn p a {
+  position: absolute;
+  left: 216px;
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 20px;
+  color: #000;
+  background: url(../image/sprite/icon_tre.png) no-repeat -600px -696px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 14px;
+}
+.main .mainCenter .detail .proBtn p a:hover {
+  color: #c9a063;
+}
+.main .mainCenter .detail p.freeExp {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #313131;
+  text-decoration: underline;
+}
+.main .mainCenter .detail .addCar {
+  width: 428px;
+  border: 1px solid #000;
+  font-size: 16px;
+  line-height: 40px;
+  background: #fff;
+  color: #000;
+}
+.main .mainCenter .detail .proShare {
+  float: right;
+  margin-top: 20px;
+  text-align: right;
+  font-size: 12px;
+}
+.main .mainCenter .detail .proShare a {
+  display: inline-block;
+  float: none;
+  width: 24px;
+  height: 20px;
+  margin-left: 4px;
+  text-align: left;
+  line-height: 9999px;
+  vertical-align: middle;
+  overflow: hidden;
+  border: none;
+}
+.main .mainCenter .detail .proShare a.xinlang {
+  background: url(../image/sprite/icon_tre.png) no-repeat 0 -701px;
+}
+.main .mainCenter .detail .proShare a.tengxun {
+  background: url(../image/sprite/icon_tre.png) no-repeat -299px -701px;
+}
+.description {
+  width: 1000px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #666;
+}
+.description > div {
+  float: left;
+  width: 459px;
+  padding: 0 40px 0 0;
+  overflow: hidden;
+}
+.description > div > div {
+  color: #666;
+  height: 100%;
+}
+.description > div > div dl {
+  clear: both;
+  overflow: hidden;
+}
+.description > div > div dl dt {
+  float: left;
+  width: 20%;
+  line-height: 2;
+}
+.description > div > div dl dd {
+  float: left;
+  width: 80%;
+  line-height: 2;
+}
+.description > div > div dl dd.washedImg img {
+  display: inline-block;
+  width: 20%;
+}
+.description > div.desRight {
+  float: right;
+  width: 460px;
+  padding: 0 0 0 40px;
+  border: none;
+  border-left: 1px solid #eee;
+}

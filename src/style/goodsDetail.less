@@ -1,0 +1,407 @@
+@charset 'utf-8';
+@import './headFoot.less';
+
+.title {
+    background: #313131;
+    height: 40px;
+
+    .inner3 {
+        width: 1000px;
+        height: 16px;
+        margin: 0 auto;
+        padding: 10px 0;
+        line-height: 16px;
+        color: #999;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            height: 15px;
+            line-height: 9999px;
+            background: url(./../image/sprite/icon_tre.png) no-repeat -3px -1198px;
+            overflow: hidden;
+        }
+
+        span {
+            line-height: 15px;
+        }
+
+    }
+}
+
+.main {
+    padding: 10px 0 40px;
+
+    .mainCenter {
+        width: 1180px;
+        margin: 0 auto;
+        height: 640px;
+        overflow: hidden;
+
+        .imgBox {
+
+            display: block;
+            position: relative;
+            float: left;
+            width: 108px;
+
+            .imgListBox {
+                position: relative;
+                float: left;
+                width: 72px;
+                height: 640px;
+                padding: 0;
+                overflow: hidden;
+
+                span {
+                    position: absolute;
+                    width: 72px;
+                    height: 20px;
+                    left: 0;
+                    margin-left: 0;
+                    background: url(./../image/sprite/arrow_tre.png) no-repeat #000;
+                    opacity: .7;
+                    cursor: pointer;
+                    display: block;
+                    z-index: 20;
+
+                    &.top {
+                        top: 0;
+                        background-position: 26px -391px;
+                    }
+
+                    &.bottom {
+                        background-position: 26px -488px;
+                        top: 620px;
+                        bottom: 0;
+                    }
+                }
+
+                .imgList {
+                    position: absolute;
+                    height: fit-content;
+
+                    li {
+                        margin-right: 36px;
+                        width: 72px;
+                        height: 128px;
+                        padding: 2px 0;
+                        cursor: pointer;
+                        border: 0 solid #fff;
+
+                        img {
+                            width: 72px;
+                            height: 128px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .midBox {
+            float: left;
+            position: relative;
+
+            .mid {
+                position: relative;
+
+                img {
+                    width: 360px;
+                    height: 640px;
+                }
+
+                .moveBox {
+                    background: #ccc;
+                    opacity: 0.4;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    // width: 100px;
+                    // height: 100px;
+                }
+            }
+
+            .bigBox {
+                // display: inline-block;
+                width: 505px;
+                height: 560px;
+                overflow: hidden;
+                position: absolute;
+                left: 360px;
+                top: 0;
+                display: none;
+                z-index: 100;
+
+                .bigImg {
+                    position: absolute;
+                }
+            }
+        }
+
+        .detail {
+            float: right;
+            width: 430px;
+            margin-top: 85px;
+
+            p {
+                line-height: 30px;
+                margin: 5px 0;
+
+                &.proBrand {
+                    font-size: 20px;
+                    color: #000;
+
+                }
+
+                &.proPrice {
+                    line-height: 30px;
+                    font-size: 20px;
+                    color: #a40035;
+                }
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #333;
+                line-height: 30px;
+
+                em {
+                    font-size: 11px;
+                    margin-left: .6em;
+                    color: #aaa;
+                }
+            }
+
+
+
+            .optColor {
+                margin-top: 17px;
+                height: 19px;
+
+                li {
+                    float: left;
+                    height: 26px;
+                    padding-right: 12px;
+                    line-height: 26px;
+                    color: #666;
+
+
+
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 5px;
+
+                        img {
+
+                            padding: 5px;
+
+                            &:hover,
+                            &:active {
+                                width: 16px;
+                                height: 16px;
+                                border: 2px solid #999;
+                                padding: 3px;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .optSize {
+                margin-top: 17px;
+                height: 19px;
+
+                li {
+                    float: left;
+                    height: 26px;
+                    padding-right: 12px;
+                    line-height: 26px;
+                    color: #666;
+
+                    font-size: 14px;
+
+                    &.sizeTable {
+                        width: 40px;
+                        padding-left: 27px;
+                        margin-left: 20px;
+                        background: url(./../image/sprite/icon_tre.png) no-repeat -300px -594px;
+                        color: #666;
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+
+                    a {
+                        width: 26px;
+                        height: 26px;
+                        margin-right: 2px;
+                        color: #000;
+                        line-height: 26px;
+                        text-align: center;
+                        z-index: 150;
+                    }
+                }
+            }
+
+            .proBtn {
+                position: relative;
+                margin-top: 22px;
+                margin-bottom: 22px;
+                overflow: hidden;
+
+                p {
+                    button {
+                        display: block;
+                        float: left;
+                        color: #000;
+                        padding: 0;
+
+                        &.buynow {
+
+                            text-indent: 0;
+                            height: 22px;
+                            font-size: 16px;
+                            margin-right: 12px;
+                            background: #fff;
+                        }
+
+                        &.favorite {
+
+                            height: 21px;
+                            font-size: 14px;
+                            padding-left: 44px;
+                            background: url(./../image/sprite/icon_tre.png) no-repeat -600px -600px;
+
+                            &:hover {
+                                color: #c9a063;
+                            }
+                        }
+                    }
+
+                    a {
+                        position: absolute;
+                        left: 216px;
+                        display: inline-block;
+                        overflow: hidden;
+                        padding-left: 20px;
+                        color: #000;
+                        background: url(./../image/sprite/icon_tre.png) no-repeat -600px -696px;
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 14px;
+
+                        &:hover {
+                            color: #c9a063;
+                        }
+                    }
+                }
+            }
+
+            p.freeExp {
+                margin-bottom: 20px;
+                margin-top: 5px;
+                font-size: 12px;
+                color: #313131;
+                text-decoration: underline;
+            }
+
+            .addCar {
+                width: 428px;
+                border: 1px solid #000;
+                font-size: 16px;
+                line-height: 40px;
+                background: #fff;
+                color: #000;
+            }
+
+            .proShare {
+                float: right;
+                margin-top: 20px;
+                text-align: right;
+                font-size: 12px;
+
+                a {
+                    display: inline-block;
+                    float: none;
+                    width: 24px;
+                    height: 20px;
+                    margin-left: 4px;
+                    text-align: left;
+                    line-height: 9999px;
+                    vertical-align: middle;
+                    overflow: hidden;
+                    border: none;
+
+                    &.xinlang {
+                        background: url(./../image/sprite/icon_tre.png) no-repeat 0 -701px;
+                    }
+
+                    &.tengxun {
+                        background: url(./../image/sprite/icon_tre.png) no-repeat -299px -701px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.description {
+    width: 1000px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+
+    &>div {
+        float: left;
+        width: 459px;
+        padding: 0 40px 0 0;
+        overflow: hidden;
+
+        &>div {
+            color: #666;
+            height: 100%;
+
+            dl {
+                clear: both;
+                overflow: hidden;
+
+                dt {
+                    float: left;
+                    width: 20%;
+                    line-height: 2;
+                }
+
+                dd {
+                    float: left;
+                    width: 80%;
+                    line-height: 2;
+
+                    &.washedImg {
+                        img {
+                            display: inline-block;
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // &.desLeft {
+        //     &.desContent {}
+        // }
+
+        &.desRight {
+            float: right;
+            width: 460px;
+            padding: 0 0 0 40px;
+            border: none;
+            border-left: 1px solid #eee;
+        }
+    }
+
+}

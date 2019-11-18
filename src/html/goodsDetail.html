@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../style/goodsDetail.css">
+    <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="./index1.html"></a></h1>
+            <div class="header-nav">
+                <span><a href="./login.html">登录</a><em>|</em><a href="./regester.html">注册</a><em>|</em></span>
+                <a href="#">我的账户</a>
+                <a href="#">我的收藏</a>
+                <a href="">购物袋(<span class="carNum"></span>)</a>
+            </div>
+            <div class="searchBox">
+                <input type="text" name="search" id="search">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="navFixed">
+            <ul>
+                <li class="first"><a href="">首页</a></li>
+                <li><a href="">品牌动向</a></li>
+                <li><a href="">新品资讯</a></li>
+                <li><a href="">春夏大减价</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>SALE</h4>
+                            <ul>
+                                <li><a href="">T恤/衬衫</a></li>
+                                <li><a href="">卫衣/毛织</a></li>
+                                <li><a href="">裤装</a></li>
+                                <li><a href="">外套</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">秋冬大衣</a></li>
+                                <li><a href="">配饰</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">全部新品</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>NEW IN</h4>
+                            <ul>
+                                <li><a href="">11月7号到店</a></li>
+                                <li><a href="">10月24号到店</a></li>
+                                <li><a href="">10月10号到店</a></li>
+                                <li><a href="">9月新品到店</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">8月新品到店</a></li>
+                                <li><a href="">全部新品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">三大系列</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>THREE MAJOR_LABELS</h4>
+                            <ul>
+                                <li><a href="">金标系列</a></li>
+                                <li><a href="">黑标系列</a></li>
+                                <li><a href="">白标系列</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">卫衣/毛织</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>HOODIES WOOLEN</h4>
+                            <ul>
+                                <li><a href="">卫衣</a></li>
+                                <li><a href="">毛织</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">衬衫</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>SHIRTS</h4>
+                            <ul>
+                                <li><a href="">长袖衬衫</a></li>
+                                <li><a href="">短袖衬衫</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">T恤</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>T SHIRTS</h4>
+                            <ul>
+                                <li><a href="">长袖T恤</a></li>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">POLO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">裤装</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>PANTS</h4>
+                            <ul>
+                                <li><a href="">休闲裤</a></li>
+                                <li><a href="">牛仔裤</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">春秋外套</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>COATS</h4>
+                            <ul>
+                                <li><a href="">风衣</a></li>
+                                <li><a href="">夹克</a></li>
+                                <li><a href="">皮衣</a></li>
+                                <li><a href="">西服</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">秋冬大衣</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>OVERCOAT</h4>
+                            <ul>
+                                <li><a href="">毛呢大衣</a></li>
+                                <li><a href="">羽绒服</a></li>
+                                <li><a href="">皮衣</a></li>
+                                <li><a href="">棉衣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">鞋</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>SHOES</h4>
+                            <ul>
+                                <li><a href="">凉鞋/拖鞋</a></li>
+                                <li><a href="">休闲鞋</a></li>
+                                <li><a href="">皮衣</a></li>
+                                <li><a href="">棉衣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">配饰</a>
+                    <div class="subnav">
+                        <div class="line">-</div>
+                        <div class="subnavContent">
+                            <h4>ACCESSORIES</h4>
+                            <ul>
+                                <li><a href="">项链</a></li>
+                                <li><a href="">帽</a></li>
+                                <li><a href="">包</a></li>
+                                <li><a href="">袜</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">围巾</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="last"><span>客服营业时间 : 9:00-18:00</span></li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="title">
+        <div class="inner3">
+            <a href="./index1.html"></a>&nbsp;&nbsp;>&nbsp;&nbsp;<span>休闲半高领长袖T恤男</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainCenter">
+            <div class="imgBox">
+                <div class="imgListBox">
+                    <span class="top"></span>
+                    <span class="bottom"></span>
+                    <ul class="imgList">
+                        <li><img src="./../image/goodsInfo/1b1.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b2.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b3.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b4.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b5.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b6.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b7.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="midBox">
+                <div class="mid">
+                    <img src="./../image/goodsInfo/1b1.jpg" alt="" class="midImg">
+                    <div class="moveBox"></div>
+                </div>
+                <div class="bigBox">
+                    <img src="./../image/goodsInfo/1b1.jpg" alt="" class="bigImg">
+                </div>
+            </div>
+            <div class="detail">
+                <p class="proBrand">TRENDIANO</p>
+                <h2>休闲半高领长袖T恤男 <em>3ZC4023390090</em></h2>
+                <p class="proPrice">￥499</p>
+                <ul class="optColor clear">
+                    <li>颜色:</li>
+                    <li><a href="javascript:;"><img src="./../image/goodsInfo/1col1.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="./../image/goodsInfo/1col2.jpg" alt=""></a></li>
+                </ul>
+                <ul class="optSize clear">
+                    <li class="size">尺码:</li>
+                    <li><a href="javascript:;">S</a></li>
+                    <li><a href="javascript:;">M</a></li>
+                    <li><a href="javascript:;">L</a></li>
+                    <li><a href="javascript:;">XL</a></li>
+                    <li class="sizeTable">尺码表</li>
+                </ul>
+                <div class="proBtn">
+                    <p>
+                        <button class="buynow">一键购买</button>
+                        <button class="favorite">加入收藏</button>
+                        <a href="">联系客服</a>
+                    </p>
+                </div>
+                <p class="freeExp">单笔消费满699免邮</p>
+                <button class="addCar">加入购物袋</button>
+                <div class="proShare">分享:
+                    <a href="" class="xinlang">新浪微博</a>
+                    <a href="" class="tengxun">腾讯微博</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <div class="desLeft">
+            <div class="desContent">
+                <dl>
+                    <dt>名称</dt>
+                    <dd>休闲半高领长袖T恤男</dd>
+                </dl>
+                <dl>
+                    <dt>风格</dt>
+                    <dd>富有创意的设计细节十分吸睛；考究的版型穿起来相当潮流；甄选优质面料打造，上身质感舒适亲肤；搭配休闲裤+老爹鞋，打造时尚潮男LOOK</dd>
+                </dl>
+                <dl style="clear:both">
+                    <dt>纤维含量<br>小知识</dt>
+                    <dd>产品或产品的某一部分含有2种及以上的纤维时，除了许可不标注的纤维外，在标签上标明的每一种纤维含量允许偏差为5%，填充物的允许偏差为10%.</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="desRight">
+            <div class="desContent">
+                <dl style="clear:both">
+                    <dt>面料成分</dt>
+                    <dd>面料:再生纤维素纤维61.7% 锦纶33.1% 氨纶5.2%(绣花线除外)</dd>
+                </dl>
+                <dl>
+                    <dt>长度</dt>
+                    <dd>常规</dd>
+                </dl>
+                <dl>
+                    <dt>版型</dt>
+                    <dd>适中</dd>
+                </dl>
+                <dl>
+                    <dt>洗涤</dt>
+                    <dd class="washedImg"><img src="./../image/goodsInfo/notice1.png"><img
+                            src="./../image/goodsInfo/notice2.png"><img src="./../image/goodsInfo/notice3.png"><img
+                            src="./../image/goodsInfo/notice4.png"><img src="./../image/goodsInfo/notice5.png"><img
+                            src="./../image/goodsInfo/notice6.png"><img src="./../image/goodsInfo/notice7.png"><img
+                            src="./../image/goodsInfo/notice8.png"><img src="./../image/goodsInfo/notice9.png">
+                        <p>装饰工艺部位不可揉搓,不可熨烫<br></p>
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner1">
+            <ul class="clear">
+                <li class="date">
+                    <h3>活动日历</h3>
+                    <div class="mouth">
+                        <span>Nov<em>16</em></span>
+                    </div>
+                    <div class="dataImg"><img src="./../image/index/date.png" alt=""></div>
+                </li>
+                <li class="code">
+                    <h3>官方微信</h3>
+                    <div><img src="./../image/index/weixin_code.png" alt=""></div>
+                    <h3>关注微博</h3>
+                    <a href="">关注@TRENDIANO官方微博</a>
+                </li>
+                <li class="foBrand">
+                    <h3>品牌资讯</h3>
+                    <div><img src="./../image/index/foot.jpg" alt=""></div>
+                </li>
+                <li class="about">
+                    <h3>ABOUT US</h3>
+                    <p><a href="">购物流程</a><a href="">支付方式</a></p>
+                    <p><a href="">退货流程</a><a href="">配送说明</a></p>
+                    <p><a href="">关于我们</a></p>
+                    <div>
+                        <span>联系客服</span>
+                        <span>客服400-880-0086</span>
+                        <span>七天无条件退货</span>
+                        <span class="inline">支付宝</span>
+                        <span class="inline">财通</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyRight">
+        <div class="inner2">
+            <p class="line1">隐私申明&nbsp;&nbsp;联系我们</p>
+            <p>Copyright @ 2010-2019&nbsp;&nbsp; 广州赫基信息科技有限公司版权所有</p>
+            <p>粤ICP备10229258号-4&nbsp;&nbsp;粤公网安备44010602001993号</p>
+        </div>
+    </div>
+    <div class="backTop">
+        <ul>
+            <li><a href="#" class="top">TOP</a></li>
+            <li><a href="./index1.html">返回首页</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function () {
+        $('.mid').on({
+            'mouseover': function () {
+                // console.log($('.bigBox').height());
+                $('.bigBox').show();
+                $('.moveBox').show();
+                $('.moveBox').css({
+                    'height': $('.bigBox').height() * $('.mid').height() / $(
+                        '.bigImg').height() + 'px',
+                    'width': $('.bigBox').width() * $('.mid').width() / $(
+                        '.bigImg').width() + 'px'
+                });
+
+            },
+            'mousemove': function (ev) {
+                var ratio = $('.bigImg').width() / $('.mid').width();
+                var y = ev.pageY - $('.mid').offset().top - ($('.moveBox').height() / 2);
+                var x = ev.pageX - $('.mid').offset().left - ($('.moveBox').width() / 2);
+                if (y <= 0) {
+                    y = 0;
+                } else if (y >= $('.mid').height() - $('.moveBox').height()) {
+                    y = $('.mid').height() - $('.moveBox').height();
+                }
+                if (x <= 0) {
+                    x = 0;
+                } else if (x >= $('.mid').width() - $('.moveBox').width()) {
+                    x = $('.mid').width() - $('.moveBox').width();
+                }
+                $('.moveBox').css({
+                    'top': y + 'px',
+                    'left': x + 'px'
+                })
+                $('.bigImg').css({
+                    'top': -y * ratio + 'px',
+                    'left': -x * ratio + 'px'
+                })
+            },
+            'mouseout': function () {
+                $('.bigBox').hide();
+                $('.moveBox').hide();
+            },
+
+        })
+
+        //list轮播
+        $('.imgList>li>img').on('click', function () {
+            // var i = $('.imgList>li').index(this);
+            // var baseUrl = './../image/goodsInfo/';
+            var midPic = $(this).parents('.mainCenter').find('.mid>img');
+            var bigPic = $(this).parents('.mainCenter').find('.bigBox>img')
+            midPic[0].src = $(this)[0].src;
+            bigPic[0].src = $(this)[0].src;
+
+        })
+        var countNextClick = 1;
+        var countPreClick = 1;
+        $('.imgListBox>span').on('click', function () {
+            var i = $('.imgListBox>span').index(this);
+            var clickNum = parseInt(($('.imgList').height() - $('.imgBox').height()) / 132);
+            console.log(countPreClick);
+            console.log(countNextClick);
+            if (i) {
+                if (countNextClick <= clickNum) {
+                    $('.imgList').css({
+                        'top': `-=132`
+                    })
+                    countNextClick++;
+                }
+            } else {
+                if (countPreClick > clickNum) return;
+                if (countPreClick <= countNextClick) {
+                    $('.imgList').css({
+                        'top': `+=132`
+                    });
+                    countPreClick++;
+                }
+            }
+            if ((countNextClick > clickNum) | (countPreClick > clickNum)) {
+                return;
+            }
+            if ((countNextClick == (clickNum + 1)) && (countPreClick == (clickNum + 1))) {
+                countNextClick = 1;
+                countPreClick = 1;
+            }
+        })
+    })
+</script>
+
+</html>
