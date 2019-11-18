@@ -2,6 +2,68 @@
 
 @import './common.less';
 
+.carImg {
+    a {
+        img {
+            width: 72px;
+            height: 108px;
+        }
+    }
+}
+
+tbody {
+    tr {
+        th {
+            font-weight: normal;
+
+            .editNum {
+                width: 50px;
+                height: 20px;
+                border: 1px solid #e5e5e5;
+                position: relative;
+                margin: 0 auto 6px;
+
+                em {
+                    display: block;
+                    overflow: hidden;
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    text-align: center;
+                    font-size: 8px;
+                    line-height: 90;
+                    cursor: pointer;
+                    background: url(./../image/car/btn_arrow_up_down.png) left -10px no-repeat;
+
+                    &.plus {
+                        top: 0;
+                        bottom: auto;
+                        background-position: left top;
+                    }
+                }
+
+                input {
+                    width: 46px;
+                    height: 16px;
+                    line-height: 16px;
+                    border: 0;
+                    padding: 2px;
+                    text-align: center;
+                    font-size: 10px;
+                    color: #666;
+                    vertical-align: top;
+                }
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
 .header {
     height: 40px;
     position: relative;
@@ -139,6 +201,8 @@
                                 height: 46px;
                                 line-height: 46px;
                                 border-bottom: 1px solid #f3f3f3;
+
+
 
                                 &:nth-of-type(2),
                                 &:nth-of-type(4) {

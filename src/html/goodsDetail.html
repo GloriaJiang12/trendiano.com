@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../style/goodsDetail.css">
     <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./../../node_modules/requirejs/require.js" data-main="../js/main-detail"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
                 <span><a href="./login.html">登录</a><em>|</em><a href="./regester.html">注册</a><em>|</em></span>
                 <a href="#">我的账户</a>
                 <a href="#">我的收藏</a>
-                <a href="">购物袋(<span class="carNum"></span>)</a>
+                <a href="./shopCar.html">购物袋(<span class="carNum"></span>)</a>
             </div>
             <div class="searchBox">
                 <input type="text" name="search" id="search">
@@ -196,7 +197,7 @@
     </div>
     <div class="title">
         <div class="inner3">
-            <a href="./index1.html"></a>&nbsp;&nbsp;>&nbsp;&nbsp;<span>休闲半高领长袖T恤男</span>
+            <a href="./index1.html"></a>&nbsp;&nbsp;>&nbsp;&nbsp;<span></span>
         </div>
     </div>
     <div class="main">
@@ -206,29 +207,29 @@
                     <span class="top"></span>
                     <span class="bottom"></span>
                     <ul class="imgList">
-                        <li><img src="./../image/goodsInfo/1b1.jpg" alt=""></li>
+                        <!-- <li><img src="./../image/goodsInfo/1b1.jpg" alt=""></li>
                         <li><img src="./../image/goodsInfo/1b2.jpg" alt=""></li>
                         <li><img src="./../image/goodsInfo/1b3.jpg" alt=""></li>
                         <li><img src="./../image/goodsInfo/1b4.jpg" alt=""></li>
                         <li><img src="./../image/goodsInfo/1b5.jpg" alt=""></li>
                         <li><img src="./../image/goodsInfo/1b6.jpg" alt=""></li>
-                        <li><img src="./../image/goodsInfo/1b7.jpg" alt=""></li>
+                        <li><img src="./../image/goodsInfo/1b7.jpg" alt=""></li> -->
                     </ul>
                 </div>
             </div>
             <div class="midBox">
                 <div class="mid">
-                    <img src="./../image/goodsInfo/1b1.jpg" alt="" class="midImg">
+                    <!-- <img src="./../image/goodsInfo/1b1.jpg" alt="" class="midImg"> -->
                     <div class="moveBox"></div>
                 </div>
                 <div class="bigBox">
-                    <img src="./../image/goodsInfo/1b1.jpg" alt="" class="bigImg">
+                    <!-- <img src="./../image/goodsInfo/1b1.jpg" alt="" class="bigImg"> -->
                 </div>
             </div>
             <div class="detail">
                 <p class="proBrand">TRENDIANO</p>
-                <h2>休闲半高领长袖T恤男 <em>3ZC4023390090</em></h2>
-                <p class="proPrice">￥499</p>
+                <h2><em>3ZC4023390090</em></h2>
+                <p class="proPrice"></p>
                 <ul class="optColor clear">
                     <li>颜色:</li>
                     <li><a href="javascript:;"><img src="./../image/goodsInfo/1col1.jpg" alt=""></a></li>
@@ -353,93 +354,6 @@
         </ul>
     </div>
 </body>
-<script>
-    $(function () {
-        $('.mid').on({
-            'mouseover': function () {
-                // console.log($('.bigBox').height());
-                $('.bigBox').show();
-                $('.moveBox').show();
-                $('.moveBox').css({
-                    'height': $('.bigBox').height() * $('.mid').height() / $(
-                        '.bigImg').height() + 'px',
-                    'width': $('.bigBox').width() * $('.mid').width() / $(
-                        '.bigImg').width() + 'px'
-                });
 
-            },
-            'mousemove': function (ev) {
-                var ratio = $('.bigImg').width() / $('.mid').width();
-                var y = ev.pageY - $('.mid').offset().top - ($('.moveBox').height() / 2);
-                var x = ev.pageX - $('.mid').offset().left - ($('.moveBox').width() / 2);
-                if (y <= 0) {
-                    y = 0;
-                } else if (y >= $('.mid').height() - $('.moveBox').height()) {
-                    y = $('.mid').height() - $('.moveBox').height();
-                }
-                if (x <= 0) {
-                    x = 0;
-                } else if (x >= $('.mid').width() - $('.moveBox').width()) {
-                    x = $('.mid').width() - $('.moveBox').width();
-                }
-                $('.moveBox').css({
-                    'top': y + 'px',
-                    'left': x + 'px'
-                })
-                $('.bigImg').css({
-                    'top': -y * ratio + 'px',
-                    'left': -x * ratio + 'px'
-                })
-            },
-            'mouseout': function () {
-                $('.bigBox').hide();
-                $('.moveBox').hide();
-            },
-
-        })
-
-        //list轮播
-        $('.imgList>li>img').on('click', function () {
-            // var i = $('.imgList>li').index(this);
-            // var baseUrl = './../image/goodsInfo/';
-            var midPic = $(this).parents('.mainCenter').find('.mid>img');
-            var bigPic = $(this).parents('.mainCenter').find('.bigBox>img')
-            midPic[0].src = $(this)[0].src;
-            bigPic[0].src = $(this)[0].src;
-
-        })
-        var countNextClick = 1;
-        var countPreClick = 1;
-        $('.imgListBox>span').on('click', function () {
-            var i = $('.imgListBox>span').index(this);
-            var clickNum = parseInt(($('.imgList').height() - $('.imgBox').height()) / 132);
-            console.log(countPreClick);
-            console.log(countNextClick);
-            if (i) {
-                if (countNextClick <= clickNum) {
-                    $('.imgList').css({
-                        'top': `-=132`
-                    })
-                    countNextClick++;
-                }
-            } else {
-                if (countPreClick > clickNum) return;
-                if (countPreClick <= countNextClick) {
-                    $('.imgList').css({
-                        'top': `+=132`
-                    });
-                    countPreClick++;
-                }
-            }
-            if ((countNextClick > clickNum) | (countPreClick > clickNum)) {
-                return;
-            }
-            if ((countNextClick == (clickNum + 1)) && (countPreClick == (clickNum + 1))) {
-                countNextClick = 1;
-                countPreClick = 1;
-            }
-        })
-    })
-</script>
 
 </html>

@@ -241,6 +241,9 @@ body {
 .main .inner1 .banner {
   padding: 10px;
 }
+.main .inner1 .banner a img {
+  width: 1180px;
+}
 .main .inner1 .smallban li {
   padding: 10px;
   float: left;

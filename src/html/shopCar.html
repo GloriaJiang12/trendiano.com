@@ -9,6 +9,7 @@
     <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./../style/shopCar.css">
+    <script src="./../../node_modules/requirejs/require.js" data-main="../js/main-car"></script>
 </head>
 
 <body>
@@ -48,9 +49,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <th><input type="checkbox" name="single" id="single"></th>
-                                <th><a href=""><img src="./../image/goodsInfo/1s1.jpg" alt="" srcset=""></a></th>
+                                <th class="carImg"><a href=""><img src="./../image/goodsInfo/1b1.jpg" alt=""
+                                            srcset=""></a></th>
                                 <th>
                                     <div>
                                         <p>TRENDIANO</p>
@@ -61,12 +63,16 @@
                                 <th><a href="">米白/S</a></th>
                                 <th><span class="price">￥1490.00</span></th>
                                 <th>
-                                    <div class="editNum"></div>
+                                    <div class="editNum">
+                                        <em class="cut">+</em>
+                                        <input type="text" name="" id="" value="1">
+                                        <em class="plus">-</em>
+                                    </div>
                                     <a href="">收藏</a>&nbsp;/&nbsp;
                                     <a href="">删除</a>
                                 </th>
                                 <th><span class="smallCount">￥1490.00</span></th>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -77,14 +83,14 @@
             <div class="orderInfo">
                 <div class="chooseAll">
                     <p>
-                        <label for="checkAll"><input type="checkbox" name="checkAll" id="checkAll">全选</label>
+                        <label for="checkAll"><input type="checkbox" name="checkAll" id="checkAll" checked>全选</label>
                         <a href="javascript:;">删除已选</a>
                     </p>
 
                 </div>
                 <div class="sumPrice">
                     <p>已选：<span class="itemCount"></span>件<br>
-                        总计金额（不含运费）：￥<span class="totalPrice"></span></p>
+                        总计金额（不含运费）：￥<em class="totalPrices"></em><span class="totalPrice"></span></p>
                 </div>
             </div>
         </div>

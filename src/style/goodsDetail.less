@@ -47,6 +47,7 @@
             width: 108px;
 
             .imgListBox {
+                user-select: none;
                 position: relative;
                 float: left;
                 width: 72px;
@@ -218,11 +219,21 @@
                 li {
                     float: left;
                     height: 26px;
-                    padding-right: 12px;
                     line-height: 26px;
                     color: #666;
-
                     font-size: 14px;
+
+                    &.bg {
+                        background: #000;
+
+                        &>a {
+                            color: #fff;
+                        }
+                    }
+
+                    &.size {
+                        margin-right: 12px;
+                    }
 
                     &.sizeTable {
                         width: 40px;
@@ -235,6 +246,7 @@
                     }
 
                     a {
+                        display: inline-block;
                         width: 26px;
                         height: 26px;
                         margin-right: 2px;
@@ -242,6 +254,9 @@
                         line-height: 26px;
                         text-align: center;
                         z-index: 150;
+                        box-sizing: border-box;
+
+
                     }
                 }
             }
