@@ -51,6 +51,17 @@ button {
   padding: 4px 1em;
   background: #e74165;
 }
+.clear::after {
+  content: '';
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+}
+em {
+  font-style: normal;
+}
 .outFrame {
   position: relative;
   min-width: 950px;
@@ -174,4 +185,10 @@ button#getCode {
   margin: 0 6px;
   padding: 0px 8px;
   box-sizing: border-box;
+}
+.error > p {
+  height: auto;
+  margin: 0;
+  line-height: 1.5;
+  color: #f93d69;
 }

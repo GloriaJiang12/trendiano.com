@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="./../../node_modules/jquery/dist/jquery.min.js"></script> -->
     <!-- <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./../style/shopCar.css">
     <script src="./../../node_modules/requirejs/require.js" data-main="../js/main-car"></script>
@@ -84,13 +84,13 @@
                 <div class="chooseAll">
                     <p>
                         <label for="checkAll"><input type="checkbox" name="checkAll" id="checkAll" checked>全选</label>
-                        <a href="javascript:;">删除已选</a>
+                        <a class="delCheck">删除已选</a>
                     </p>
 
                 </div>
                 <div class="sumPrice">
                     <p>已选：<span class="itemCount"></span>件<br>
-                        总计金额（不含运费）：￥<em class="totalPrices"></em><span class="totalPrice"></span></p>
+                        总计金额（不含运费）：￥<span class="totalPrices"></span></p>
                 </div>
             </div>
         </div>

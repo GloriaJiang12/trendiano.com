@@ -59,6 +59,9 @@ button {
   overflow: hidden;
   display: block;
 }
+em {
+  font-style: normal;
+}
 .carImg a img {
   width: 72px;
   height: 108px;
@@ -126,7 +129,7 @@ tbody tr th p {
   right: 0;
   top: 0;
   margin-right: 12px;
-  width: 266px;
+  width: 275px;
   height: 40px;
   padding: 12px 0;
   box-sizing: border-box;
@@ -273,8 +276,8 @@ tbody tr th p {
 .bg .container .orderInfo .sumPrice p span {
   font-size: 24px;
 }
-.bg .container .orderInfo .sumPrice p span.totalPrice {
-  color: #d7261c;
+.bg .container .orderInfo .sumPrice p span.totalPrices {
+  color: #d7261c !important;
 }
 .footer {
   color: #818181;

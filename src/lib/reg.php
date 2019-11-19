@@ -23,5 +23,7 @@ if($result->num_rows>0){
 
     if($res){
         echo '{"msg":"注册成功"}';
+    }else{
+
     }
 ?>

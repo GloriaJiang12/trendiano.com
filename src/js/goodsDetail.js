@@ -29,7 +29,6 @@ define(['jquery', 'cookie'], function ($, cookie) {
         },
         addItem: function (id, price, num) {
             var shop = cookie.get('shop');
-
             var options = {
                 id: id,
                 price: price,
@@ -144,6 +143,17 @@ define(['jquery', 'cookie'], function ($, cookie) {
                 },
 
             })
-        }
+        },
+        getBagNum: function () {
+            let shop = cookie.get('shop');
+            shop = JSON.parse(shop);
+            let sum = 0;
+            // console.log(shop);
+            shop.forEach((elm, index) => {
+                let num = parseInt(elm.num);
+                sum += num;
+            })
+            $('.carNum').html(sum);
+        },
     }
 })

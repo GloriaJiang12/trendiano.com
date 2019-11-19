@@ -6,7 +6,25 @@ require.config({
     },
 })
 require(['jquery', 'carPage'], function ($, carObj) {
-    carObj.getData();
-    carObj.delete();
-    carObj.allCheck();
+    carObj.getData(function () {
+        carObj.totalPrice();
+    });
+    carObj.delete(function () {
+
+        carObj.totalPrice();
+
+    });
+    carObj.plusCut(function () {
+
+        carObj.totalPrice();
+    });
+    carObj.allCheck(function () {
+        carObj.totalPrice();
+    });
+    carObj.singleCheck(function () {
+        carObj.totalPrice();
+    });
+    carObj.deleteCheck(function () {
+        carObj.totalPrice();
+    });
 })

@@ -14,8 +14,7 @@ require(['detailPage'], function (detailObj) {
     detailObj.active();
     detailObj.listClick();
     detailObj.scalePic();
-    // $('.addCar').on('click', function () {
-    //     location.href = "./../html/shopCar.html";
-    // })
+    detailObj.getBagNum();
+
 
 })

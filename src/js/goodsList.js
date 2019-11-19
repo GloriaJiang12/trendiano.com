@@ -1,4 +1,4 @@
-define(['jquery'], function () {
+define(['jquery', 'cookie'], function ($, cookie) {
     return {
         getData: function () {
             $.ajax({
@@ -41,6 +41,17 @@ define(['jquery'], function () {
                     $(this)[0].src = `${baseUrl}list${index+1}.jpg`;
                 }
             }, 'li>a>img')
-        }
+        },
+        getBagNum: function () {
+            let shop = cookie.get('shop');
+            shop = JSON.parse(shop);
+            let sum = 0;
+            // console.log(shop);
+            shop.forEach((elm, index) => {
+                let num = parseInt(elm.num);
+                sum += num;
+            })
+            $('.carNum').html(sum);
+        },
     }
 })

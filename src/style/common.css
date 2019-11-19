@@ -59,3 +59,6 @@ button {
   overflow: hidden;
   display: block;
 }
+em {
+  font-style: normal;
+}
