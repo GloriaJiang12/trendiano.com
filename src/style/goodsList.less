@@ -126,6 +126,60 @@
                     }
                 }
             }
+
+            &>div.page {
+                padding: 20px 0;
+                text-align: right;
+
+
+                .pageNum {
+                    // float: left;
+                    height: 24px;
+                    line-height: 24px;
+
+                    .pageActive {
+                        display: inline-block;
+                        background-color: #eee;
+                        height: 24px;
+                        padding: 0 6px;
+                        color: #999;
+                    }
+
+                    a {
+                        display: inline-block;
+                        padding: 0 6px;
+                        color: #999;
+                        vertical-align: top;
+
+                        &.num {
+                            cursor: pointer;
+                        }
+
+                        &.prev,
+                        &.next {
+                            width: 0;
+                            height: 0;
+                            margin: 7px;
+                            border: 5px solid transparent;
+                            // border: .04rem solid transparent;
+                            overflow: hidden;
+                        }
+
+                        &.prev {
+                            background: url(./../image/sprite/arrow.png) 0 -149px no-repeat;
+                            line-height: 9999px;
+                            border-right-color: #999;
+                        }
+
+                        &.next {
+
+                            background: url(./../image/sprite/arrow.png) 6px -185px no-repeat;
+                            line-height: 9999px;
+                            border-left-color: #999;
+                        }
+                    }
+                }
+            }
         }
     }
 }

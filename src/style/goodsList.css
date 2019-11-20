@@ -59,6 +59,9 @@ button {
   overflow: hidden;
   display: block;
 }
+em {
+  font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -469,4 +472,46 @@ body {
 .main .inner4 .mainRight > ul li a p span {
   color: #1b1b1b;
   margin-right: 10px;
+}
+.main .inner4 .mainRight > div.page {
+  padding: 20px 0;
+  text-align: right;
+}
+.main .inner4 .mainRight > div.page .pageNum {
+  height: 24px;
+  line-height: 24px;
+}
+.main .inner4 .mainRight > div.page .pageNum .pageActive {
+  display: inline-block;
+  background-color: #eee;
+  height: 24px;
+  padding: 0 6px;
+  color: #999;
+}
+.main .inner4 .mainRight > div.page .pageNum a {
+  display: inline-block;
+  padding: 0 6px;
+  color: #999;
+  vertical-align: top;
+}
+.main .inner4 .mainRight > div.page .pageNum a.num {
+  cursor: pointer;
+}
+.main .inner4 .mainRight > div.page .pageNum a.prev,
+.main .inner4 .mainRight > div.page .pageNum a.next {
+  width: 0;
+  height: 0;
+  margin: 7px;
+  border: 5px solid transparent;
+  overflow: hidden;
+}
+.main .inner4 .mainRight > div.page .pageNum a.prev {
+  background: url(../image/sprite/arrow.png) 0 -149px no-repeat;
+  line-height: 9999px;
+  border-right-color: #999;
+}
+.main .inner4 .mainRight > div.page .pageNum a.next {
+  background: url(../image/sprite/arrow.png) 6px -185px no-repeat;
+  line-height: 9999px;
+  border-left-color: #999;
 }
