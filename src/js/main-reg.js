@@ -11,13 +11,11 @@ require.config({
 })
 
 require(['jquery', 'regLogin'], function ($, regObj) {
-
     regObj.switchCode();
     regObj.tab();
     regObj.phoneVer();
     regObj.pwdVer();
     regObj.loginVerify(function () {
-        console.log(222222);
         regObj.logEvent($('.login'));
     })
     regObj.registerVerify(function () {

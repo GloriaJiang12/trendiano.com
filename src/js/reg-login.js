@@ -65,13 +65,20 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
             })
 
             function randomImg() {
-                var codeArr = ['./../image/securityCode/1.jpg', './../image/securityCode/2.jpg', './../image/securityCode/3.jpg', './../image/securityCode/4.jpg',
-                    './../image/securityCode/5.jpg', './../image/securityCode/6.jpg',
-                    './../image/securityCode/7.jpg', './../image/securityCode/7.jpg'
+                var codeArr = ['./../image/securityCode/2831.jpg', './../image/securityCode/4853.jpg', './../image/securityCode/0066.jpg', './../image/securityCode/0885.jpg',
+                    './../image/securityCode/2953.jpg', './../image/securityCode/2560.jpg',
+                    './../image/securityCode/3467.jpg', './../image/securityCode/1890.jpg'
                 ];
+                let arr = ['2831', '4853', '0066', '0885', '2953', '2560', '3467', '1890'];
                 var ranNum = Math.floor(Math.random() * codeArr.length);
                 return codeArr[ranNum];
             }
+            // if (($('#imgCode').val() == randomImg().num) || ($('#securityCode').val() == randomImg().num)) {
+            //     return 'true';
+            // } else {
+            //     console.log($('#imgCode').val(), randomImg().num)
+            //     $('.error').append(`<p>请正确输入验证码</p>`);
+            // }
         },
         tab: function () {
             $('.wrapper>ul>li').on('click', function () {
@@ -85,11 +92,12 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
 
             $('.login').on('click', function () {
                 $('.error').empty();
-                if ($('#phone')[0].dataset.phone == 'true' && $('#pwd')[0].dataset.pwd == 'true') {
-                    console.log(1111111111);
+                let i = $('.imgVer')[0].src.indexOf($('#securityCode').val());
+                // console.log($('#securityCode').val(), $('.imgVer')[0].src)
+                if ($('#phone')[0].dataset.phone == 'true' && $('#pwd')[0].dataset.pwd == 'true' && (i != -1 && i != 0)) {
                     callback && callback();
                 } else {
-                    console.log($('#pwd').val());
+                    // console.log($('#pwd').val());
                     if ($('#phone')[0].dataset.phone == 'false') {
                         $('.error').append(`<p>手机号码格式不正确</p>`);
                     }
@@ -97,13 +105,17 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
                         console.log(30);
                         $('.error').append(`<p>密码格式不正确</p>`);
                     }
+                    if (i == -1 || i == 0) {
+                        $('.error').append(`<p>请正确输入验证码</p>`);
+                    }
                 }
             })
         },
         registerVerify: function (callback) {
             $('.reg').on('click', function () {
                 $('.error').empty();
-                if ($('#phone')[0].dataset.phone == 'true' && $('#pwd')[0].dataset.pwd == 'true' && $('#pwd').val() == $('#confirm').val()) {
+                let i = $('.imgVer')[0].src.indexOf($('#imgCode').val());
+                if ($('#phone')[0].dataset.phone == 'true' && $('#pwd')[0].dataset.pwd == 'true' && $('#pwd').val() == $('#confirm').val() && (i != -1 && i != 0)) {
                     callback && callback();
                 } else {
                     if ($('#phone')[0].dataset.phone == 'false') {
@@ -115,23 +127,22 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
                     if ($('#pwd').val() != $('#confirm').val()) {
                         $('.error').append(`<p>两次密码不一致</p>`);
                     }
+                    if (i == -1 || i == 0) {
+                        //当输入框为空，i为0
+                        $('.error').append(`<p>请正确输入验证码</p>`);
+                    }
                 }
-
-
             })
         },
         phoneVer: function () {
             let reg = /^1[3]|[5-9]\d{9}/;
-            // console.log($('#phone'));
             if (!($('#phone').val())) {
                 $('#phone')[0].dataset.phone = 'false';
             }
             $('#phone').on('blur', function () {
-                // console.log(33333);
                 if (reg.test($(this).val())) {
                     $(this)[0].dataset.phone = 'true';
                 } else if (reg.test($(this).val()) == 'false') {
-                    // console.log(44444);
                     $(this)[0].dataset.phone = 'false';
 
                 }

@@ -136,23 +136,4 @@ define(['jquery', 'cookie', 'lazyload'], function ($, cookie, lazyload) {
             });
         },
     }
-    // switchPage: function () {
-    //     $('.pageNum').on('click', ' .num', function () {
-    //         //添加后就是未来元素，用委托
-    //         $('.pageNum span').replaceWith(`<a class="num">${$('.pageNum span').html()}</a>`);
-    //         $(this).replaceWith(`<span class="current">${$(this).html()}</span>`);
-
-    //     })
-    // },
-    // next: function () {
-    //     // $('.pageNum').on('click', '.next', function () {
-    //     //     var span = $('.pageNum span');
-    //     //     span.next().replaceWith(`<span class="current">${parseInt(span.html()) + 1}</span>`);
-    //     //     span.replaceWith(`<a class="num">${span.html()}</a>`);
-
-    //     // })
-    // },
-
-
-
 })
