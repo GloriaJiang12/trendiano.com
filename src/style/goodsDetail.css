@@ -59,6 +59,9 @@ button {
   overflow: hidden;
   display: block;
 }
+em {
+  font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -114,6 +117,30 @@ body {
 }
 .header .header-nav a {
   color: #a0a0a0;
+  display: inline-block;
+  padding: 0 4px;
+  margin: 0 6px;
+}
+.header .header-nav a.favorite {
+  padding-left: 18px;
+  background: url(../image/sprite/icon_tre.png) no-repeat 3px -86px;
+}
+.header .header-nav a.bag {
+  padding-left: 18px;
+  padding-right: 0;
+  margin-right: 0;
+  background: url(../image/sprite/icon_tre.png) no-repeat -300px -89px;
+}
+.header .header-nav a:hover {
+  color: #c9a063;
+}
+.header .header-nav span em {
+  font-style: normal;
+  font-size: 12px;
+  color: #A0A0A0;
+}
+.header .header-nav span > a {
+  padding-left: 0;
 }
 .header .searchBox {
   position: absolute;
@@ -373,6 +400,7 @@ body {
 .title {
   background: #313131;
   height: 40px;
+  width: 100%;
 }
 .title .inner3 {
   width: 1000px;

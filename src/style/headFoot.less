@@ -65,7 +65,42 @@ body {
 
         a {
             color: #a0a0a0;
+            display: inline-block;
+            padding: 0 4px;
+            margin: 0 6px;
+
+
+            &.favorite {
+                padding-left: 18px;
+                background: url(./../image/sprite/icon_tre.png) no-repeat 3px -86px;
+            }
+
+            &.bag {
+                padding-left: 18px;
+                padding-right: 0;
+                margin-right: 0;
+                background: url(./../image/sprite/icon_tre.png) no-repeat -300px -89px;
+            }
+
+            &:hover {
+                color: #c9a063;
+            }
         }
+
+        span {
+            em {
+                font-style: normal;
+                font-size: 12px;
+                color: #A0A0A0;
+            }
+
+            &>a {
+                padding-left: 0;
+
+            }
+        }
+
+
     }
 
     .searchBox {

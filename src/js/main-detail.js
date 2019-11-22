@@ -2,19 +2,29 @@ require.config({
     paths: {
         jquery: './../../node_modules/jquery/dist/jquery.min',
         detailPage: './goodsDetail',
-        cookie: './cookie'
+        cookie: './cookie',
+        common: './common'
     },
 })
-require(['detailPage'], function (detailObj) {
+require(['detailPage', 'common'], function (detailObj, common) {
     detailObj.getData(function (id, price) {
         $('.addCar').on('click', function () {
-            detailObj.addItem(id, price, '1');
+            let size = $('.optSize li.bg a').text();
+            if (size) {
+                detailObj.addItem(id, price, '1', size);
+                location.href = './../html/shopCar.html';
+            } else {
+                alert('请选择尺码');
+            }
+
         })
     });
     detailObj.active();
     detailObj.listClick();
     detailObj.scalePic();
-    detailObj.getBagNum();
-
+    common.getBagNum();
+    common.saveUser();
+    common.back();
+    common.scrollListDetail();
 
 })

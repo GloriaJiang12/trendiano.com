@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./../style/goodsList.css">
-    <script src="./../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="./../../node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="./../../node_modules/requirejs/require.js" data-main="../js/main-list"></script>
 </head>
 
@@ -16,10 +16,11 @@
         <div class="inner">
             <h1 class="logo"><a href="./index1.html"></a></h1>
             <div class="header-nav">
-                <span><a href="./login.html">登录</a><em>|</em><a href="./regester.html">注册</a><em>|</em></span>
+                <span><em class="welcome"></em><a href="javascript:;" class="loginIn">登录</a><em>|</em><a
+                        href="./regester.html">注册</a><em>|</em></span>
                 <a href="#">我的账户</a>
-                <a href="#">我的收藏</a>
-                <a href="">购物袋(<span class="carNum"></span>)</a>
+                <a href="#" class="favorite">我的收藏</a>
+                <a href="./shopCar.html" class="bag">购物袋(<span class="carNum"></span>)</a>
             </div>
             <div class="searchBox">
                 <input type="text" name="search" id="search">
@@ -196,7 +197,7 @@
         </div>
     </div>
     <div class="title">
-        <div class="inner3"><span>T恤</span></div>
+        <div class="inner3"><span class="change">T恤</span></div>
     </div>
     <div class="main">
         <div class="inner4 clear">

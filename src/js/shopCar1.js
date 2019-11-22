@@ -38,7 +38,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                                         <p>货号：3ZC4320900010</p>
                                     </div>
                                 </th>
-                                <th><a href="">米白/S</a></th>
+                                <th><a href="">${elm.color}/${arr[0].size}</a></th>
                                 <th><span class="price">￥${elm.price}</span></th>
                                 <th class="operate">
                                     <div class="editNum">
@@ -180,5 +180,11 @@ define(['jquery', 'cookie'], function ($, cookie) {
             $('.itemCount').html(itemCount);
             $('.carNum').html(itemCount);
         },
+
+        pay: function () {
+            $('.pay').on('click', function () {
+                alert(`总共${$('.totalPrices').text()}元`)
+            })
+        }
     }
 });

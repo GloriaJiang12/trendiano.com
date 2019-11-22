@@ -1,4 +1,4 @@
-define(['jquery', 'cookie'], function ($, cookie) {
+define(['jquery', 'cookie', 'lazyload'], function ($, cookie, lazyload) {
     return {
         // getData: function () {
         //     $.ajax({
@@ -35,7 +35,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                     var index = $('.itemList>li').index($(this).parents('li'));
                     let number = index + 1 + page;
                     console.log(number);
-                    if (number < 15) {
+                    if (number <= 15) {
                         var baseUrl = './../image/goodsList/';
                         $(this)[0].src = `${baseUrl}list${number}-hover.jpg`;
                     } else {
@@ -47,7 +47,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                     page = (page - 1) * 12;
                     var index = $('.itemList>li').index($(this).parents('li'));
                     let number = index + 1 + page;
-                    if (number < 15) {
+                    if (number <= 15) {
                         var baseUrl = './../image/goodsList/';
                         $(this)[0].src = `${baseUrl}list${number}.jpg`;
                     } else {
@@ -58,14 +58,16 @@ define(['jquery', 'cookie'], function ($, cookie) {
         },
         getBagNum: function () {
             let shop = cookie.get('shop');
-            shop = JSON.parse(shop);
-            let sum = 0;
-            // console.log(shop);
-            shop.forEach((elm, index) => {
-                let num = parseInt(elm.num);
-                sum += num;
-            })
-            $('.carNum').html(sum);
+            if (shop) {
+                shop = JSON.parse(shop);
+                let sum = 0;
+                // console.log(shop);
+                shop.forEach((elm, index) => {
+                    let num = parseInt(elm.num);
+                    sum += num;
+                })
+                $('.carNum').html(sum);
+            }
         },
         pagechange: {
             next: function (callback) {
@@ -110,38 +112,47 @@ define(['jquery', 'cookie'], function ($, cookie) {
                     console.log(res);
                     // var data = JSON.parse(res);
                     // console.log(data);
-                    // console.log(JSON.parse(res));
+                    // console.log(JSON.parse(res);
                     res.forEach((elm, index) => {
                         // console.log(elm.src);
                         str += `<li><a href="./../html/goodsDetail.html?id=${elm.id}">
-                            <img src="./../image/goodsList/${elm.src}" alt="">
+                            <img data-original= "./../image/goodsList/${elm.src}"
+                            alt = "" width:"180px" height:"320px" class ="lazy">
                             <span class="T-brand">TRENDIANO</span>
                             <span class="T-name">${elm.title}</span>
                             <p><span class="price">￥${elm.price}</span></p>
                         </a>
                     </li>`;
                     });
+
                     $('.itemList').append(str);
+                    $("img.lazy").lazyload({
+                        placeholder: './../image/loading.gif',
+                        effect: "fadeIn",
+                        threshold: -150,
+                        // event: 'mouseover'
+                    });
                 }
             });
         },
-        // switchPage: function () {
-        //     $('.pageNum').on('click', ' .num', function () {
-        //         //添加后就是未来元素，用委托
-        //         $('.pageNum span').replaceWith(`<a class="num">${$('.pageNum span').html()}</a>`);
-        //         $(this).replaceWith(`<span class="current">${$(this).html()}</span>`);
-
-        //     })
-        // },
-        // next: function () {
-        //     // $('.pageNum').on('click', '.next', function () {
-        //     //     var span = $('.pageNum span');
-        //     //     span.next().replaceWith(`<span class="current">${parseInt(span.html()) + 1}</span>`);
-        //     //     span.replaceWith(`<a class="num">${span.html()}</a>`);
-
-        //     // })
-        // },
-
-
     }
+    // switchPage: function () {
+    //     $('.pageNum').on('click', ' .num', function () {
+    //         //添加后就是未来元素，用委托
+    //         $('.pageNum span').replaceWith(`<a class="num">${$('.pageNum span').html()}</a>`);
+    //         $(this).replaceWith(`<span class="current">${$(this).html()}</span>`);
+
+    //     })
+    // },
+    // next: function () {
+    //     // $('.pageNum').on('click', '.next', function () {
+    //     //     var span = $('.pageNum span');
+    //     //     span.next().replaceWith(`<span class="current">${parseInt(span.html()) + 1}</span>`);
+    //     //     span.replaceWith(`<a class="num">${span.html()}</a>`);
+
+    //     // })
+    // },
+
+
+
 })

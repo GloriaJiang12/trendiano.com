@@ -3,19 +3,19 @@ require.config({
         jquery: './../../node_modules/jquery/dist/jquery.min',
         cookie: './cookie',
         carPage: './shopCar1',
+        common: './common'
     },
 })
-require(['jquery', 'carPage'], function ($, carObj) {
+require(['jquery', 'carPage', 'common'], function ($, carObj, common) {
     carObj.getData(function () {
         carObj.totalPrice();
+        common.saveUser();
+        common.back();
     });
     carObj.delete(function () {
-
         carObj.totalPrice();
-
     });
     carObj.plusCut(function () {
-
         carObj.totalPrice();
     });
     carObj.allCheck(function () {
@@ -27,4 +27,6 @@ require(['jquery', 'carPage'], function ($, carObj) {
     carObj.deleteCheck(function () {
         carObj.totalPrice();
     });
+    common.getBagNum();
+    carObj.pay();
 })

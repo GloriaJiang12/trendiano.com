@@ -27,12 +27,13 @@ define(['jquery', 'cookie'], function ($, cookie) {
             });
 
         },
-        addItem: function (id, price, num) {
+        addItem: function (id, price, num, size) {
             var shop = cookie.get('shop');
             var options = {
                 id: id,
                 price: price,
-                num: num
+                num: num,
+                size: size,
             }
 
             if (shop) {
@@ -54,6 +55,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
             cookie.set('shop', JSON.stringify(shop), 1);
 
         },
+        //断点轮播
         active: function () {
             var countNextClick = 1;
             var countPreClick = 1;
@@ -144,16 +146,6 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
             })
         },
-        getBagNum: function () {
-            let shop = cookie.get('shop');
-            shop = JSON.parse(shop);
-            let sum = 0;
-            // console.log(shop);
-            shop.forEach((elm, index) => {
-                let num = parseInt(elm.num);
-                sum += num;
-            })
-            $('.carNum').html(sum);
-        },
+
     }
 })
